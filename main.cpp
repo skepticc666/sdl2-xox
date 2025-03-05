@@ -312,5 +312,6 @@ int main()
         }
         // SDL_RenderCopy(render, text_texture, &src, &dest);
         SDL_RenderPresent(render);
+        SDL_RenderPresent(render);
     }
 }
