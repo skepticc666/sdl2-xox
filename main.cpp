@@ -295,23 +295,6 @@ int main()
             // isRunning = false;
         }
         if (checkTie(matrix))
-        {
-            // text initialization begins here
-            SDL_Color text_color = {255, 255, 255, 255};
-            SDL_Surface *text = TTF_RenderText_Solid(font, "IT'S  A TIE!!!", text_color);
-
-            SDL_Texture *text_texture = SDL_CreateTextureFromSurface(render, text);
-            // text ends begins here
-
-            // text.w;
-
-            SDL_Rect src = {0, 0, text->w, text->h};
-            SDL_Rect dest = {0,0, text->w * 2, text->h * 2};
-            SDL_RenderCopy(render, text_texture, &src, &dest);
-            // isRunning = false;
-        }
-        // SDL_RenderCopy(render, text_texture, &src, &dest);
-        SDL_RenderPresent(render);
-        SDL_RenderPresent(render);
     }
+
 }
