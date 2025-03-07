@@ -15,7 +15,7 @@ std::string checkWinner(char matrix[3][3], char player1, char palyer2)
         }
         else
         {
-            return "yoyu lose";
+            return "you lose";
         }
     }
     else if (matrix[1][0] != ' ' && matrix[1][0] == matrix[1][1] && matrix[1][1] == matrix[1][2])
@@ -26,7 +26,7 @@ std::string checkWinner(char matrix[3][3], char player1, char palyer2)
         }
         else
         {
-            return "yoyu lose";
+            return "you lose";
         }
     }
     else if (matrix[2][0] != ' ' && matrix[2][0] == matrix[2][1] && matrix[2][1] == matrix[2][2])
@@ -37,7 +37,7 @@ std::string checkWinner(char matrix[3][3], char player1, char palyer2)
         }
         else
         {
-            return "yoyu lose";
+            return "you lose";
         }
     }
     else if (matrix[0][0] != ' ' && matrix[0][0] == matrix[1][0] && matrix[1][0] == matrix[2][0])
@@ -48,7 +48,7 @@ std::string checkWinner(char matrix[3][3], char player1, char palyer2)
         }
         else
         {
-            return "yoyu lose";
+            return "you lose";
         }
     }
     else if (matrix[0][1] != ' ' && matrix[0][1] == matrix[1][1] && matrix[1][1] == matrix[2][1])
@@ -59,7 +59,7 @@ std::string checkWinner(char matrix[3][3], char player1, char palyer2)
         }
         else
         {
-            return "yoyu lose";
+            return "you lose";
         }
     }
     else if (matrix[0][2] != ' ' && matrix[0][2] == matrix[1][2] && matrix[1][2] == matrix[2][2])
@@ -70,7 +70,7 @@ std::string checkWinner(char matrix[3][3], char player1, char palyer2)
         }
         else
         {
-            return "yoyu lose";
+            return "you lose";
         }
     }
     else if (matrix[0][0] != ' ' && matrix[0][0] == matrix[1][1] && matrix[1][1] == matrix[2][2])
@@ -81,7 +81,7 @@ std::string checkWinner(char matrix[3][3], char player1, char palyer2)
         }
         else
         {
-            return "yoyu lose";
+            return "you lose";
         }
     }
     else if (matrix[0][2] != ' ' && matrix[0][2] == matrix[1][1] && matrix[1][1] == matrix[2][0])
@@ -92,7 +92,7 @@ std::string checkWinner(char matrix[3][3], char player1, char palyer2)
         }
         else
         {
-            return "yoyu lose";
+            return "you lose";
         }
     }
     else
@@ -306,12 +306,12 @@ int main()
             // text.w;
 
             SDL_Rect src = {0, 0, text->w, text->h};
-            SDL_Rect dest = {0,0, text->w * 2, text->h * 2};
+            SDL_Rect dest = {width/2 - text->w*3/2 , height/2 - text->h *3 /2 , text->w * 3, text->h * 3};
             SDL_RenderCopy(render, text_texture, &src, &dest);
             // isRunning = false;
         }
         // SDL_RenderCopy(render, text_texture, &src, &dest);
         SDL_RenderPresent(render);
-        SDL_RenderPresent(render);
+        
     }
 }
